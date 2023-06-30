@@ -4,7 +4,6 @@
  * Created: 6/27/2023 12:05:43 PM
  * Modified: 6/30/2023 5:54:26 PM
  * Author : B550-E
- * Note: See Timing Section for Stop Watch to do Button Debouncing Via Software
  */ 
 #ifndef F_CPU
 #define F_CPU 16000000UL
@@ -33,16 +32,16 @@ int main(void)
 		}
 		else // catch
 		{
-			if((PINB & 0x01)==0)	// Alt: (PINB & (0 << PINB0)) if logic low on digital 8
+			if((PINB & 0x01)==0)	// Alt: if((PINB & (1 << PINB0)) == 0) if logic low on digital 8, pull-up resistor
 			{
-				while((PINB & 0x01) ==0);	//(PINB & (0 << PINB0)), stay in loop until de-pressed
+				while((PINB & 0x01) ==0);	//while((PINB & (1 << PINB0)) == 0), stay in loop until de-pressed
 				PORTD = index[i];
 				i++;
 				_delay_ms(delay);
 			}
-			if((PINB & 0x02)==0)	// Alt: (PINB & (0 << PINB1)) if logic low on digital 9
+			if((PINB & 0x02)==0)	// Alt: if((PINB & (1 << PINB1)) == 0) if logic low on digital 9
 			{
-				while((PINB & 0x02) ==0);	//(PINB & (0 << PINB1)), stay in loop until de-pressed
+				while((PINB & 0x02) ==0);	//while((PINB & (1 << PINB1)) == 0), stay in loop until de-pressed
 				i--;
 				PORTD = index[i];
 				_delay_ms(delay);

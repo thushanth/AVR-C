@@ -5,11 +5,14 @@
  * Modified: 6/30/2023 5:54:26 PM
  * Author : B550-E
  */ 
-
+#ifndef F_CPU
 #define F_CPU 16000000UL
+#endif
 
 #include <avr/io.h>
 #include <util/delay.h>
+
+#define delay 100
 
 int main(void)
 {
@@ -24,7 +27,7 @@ int main(void)
 		if(i > 8 || i < 0)	// try
 		{
 			PORTD = 0x00;
-			_delay_ms(100);
+			_delay_ms(delay);
 			i = 0;	
 		}
 		else // catch
@@ -34,14 +37,14 @@ int main(void)
 				while((PINB & 0x01) ==0);
 				PORTD = index[i];
 				i++;
-				_delay_ms(100);
+				_delay_ms(delay);
 			}
 			if((PINB & 0x02)==0)
 			{
 				while((PINB & 0x02) ==0);
 				i--;
 				PORTD = index[i];
-				_delay_ms(100);
+				_delay_ms(delay);
 			}
 		}
 	}

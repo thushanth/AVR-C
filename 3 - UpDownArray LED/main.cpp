@@ -2,7 +2,9 @@
  * Up_Down_LED_Array.cpp
  *
  * Created: 6/27/2023 12:05:43 PM
- * Modified: 6/30/2023 5:54:26 PM
+ * Modified: 6/30/2023 7:40:46 PM
+ * Added Alternative Code
+ * Note: See Timing Section for Stop Watch to do Button Debouncing Via Software
  * Author : B550-E
  */ 
 #ifndef F_CPU

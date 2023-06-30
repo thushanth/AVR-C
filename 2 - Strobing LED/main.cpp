@@ -15,7 +15,6 @@ int main(void)
 {
 	int i;
 	DDRD = 0xff;	// Set PORT D as output Digital Pin 0 - 7
-	DDRB = 0x00;	// Set  PORT B as input, using only pin 8 and 9 for PB
 	PORTD = 0x00;	// Set all output on PORT D as logic low
 	PORTD = 0x01;	// Set PD0 as logic high
 	_delay_ms(100);

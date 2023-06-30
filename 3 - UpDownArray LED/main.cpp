@@ -32,16 +32,16 @@ int main(void)
 		}
 		else // catch
 		{
-			if((PINB & 0x01)==0)
+			if((PINB & 0x01)==0)	// Alt: (PINB & (0 << PINB0)) if logic low on digital 8
 			{
-				while((PINB & 0x01) ==0);
+				while((PINB & 0x01) ==0);	//(PINB & (0 << PINB0)), stay in loop until de-pressed
 				PORTD = index[i];
 				i++;
 				_delay_ms(delay);
 			}
-			if((PINB & 0x02)==0)
+			if((PINB & 0x02)==0)	// Alt: (PINB & (0 << PINB1)) if logic low on digital 9
 			{
-				while((PINB & 0x02) ==0);
+				while((PINB & 0x02) ==0);	//(PINB & (0 << PINB1)), stay in loop until de-pressed
 				i--;
 				PORTD = index[i];
 				_delay_ms(delay);

@@ -4,6 +4,7 @@
  * Created: 6/27/2023 12:05:43 PM
  * Modified: 6/30/2023 5:54:26 PM
  * Author : B550-E
+ * Note: See Timing Section for Stop Watch to do Button Debouncing Via Software
  */ 
 #ifndef F_CPU
 #define F_CPU 16000000UL

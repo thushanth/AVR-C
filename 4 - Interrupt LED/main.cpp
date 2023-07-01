@@ -2,6 +2,7 @@
  * InterruptPB.cpp
  *
  * Created: 6/28/2023 12:17:33 PM
+ * Modified: 6/30/2023 7:54:20 PM
  * Author : B550-E
  */ 
 
@@ -13,14 +14,14 @@
 
 ISR(INT0_vect)	// flash the first LED 
 {
-	PORTB ^= 0x01;
+	PORTB ^= (1<<0);
 	EIFR  |= (1<<0);	// reset flag, by writing 1. Can be reset automatically. 
 	_delay_ms(200);	
 }
 
 ISR(INT1_vect) // flash the second LED
 {
-	PORTB ^= 0x02;
+	PORTB ^= (1<<1);
 	EIFR  |= (1<<1);
 	_delay_ms(200);
 }

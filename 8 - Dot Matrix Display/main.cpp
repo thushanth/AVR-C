@@ -2,6 +2,8 @@
  * DOT_Matrix.cpp
  *
  * Created: 7/5/2023 9:01:04 PM
+ * This method requires understanding and schematic of the DOT MATRIX. BASED ON 1088AS.
+ * Not perfect but for time sake, will revist latter. 
  * Author : B550-E
  */ 
 #ifndef F_CPU
@@ -12,76 +14,81 @@
 #include <util/delay.h>
 
 #define delay 100
-#define scan 50
+#define scan 5
 #define interval 3000
 
 void off()
 {
-	PORTD = 0x00;
+	PORTD = 0xFF;
+	PORTB = 0xFF;
+	PORTC = 0xFF;
 	_delay_ms(delay);
 }
 
 void on()
 {
 	PORTD = 0xFF;
+	PORTB = 0x00;
+	PORTC = 0x00;
 	_delay_ms(delay);
 }
 void one()
 {
 	PORTD = 0x18;
+	PORTB = 0x00;
+	PORTC = 0x00;
 	_delay_ms(delay);
 }
 
 void two()
 {
 	PORTD = 0xFF;
-	PORTC = 0xFC;
-	PORTB = 0xFF;
+	PORTC = ~0x00;
+	PORTB = ~0x03;
 	_delay_ms(scan);
 	PORTD = 0x70;
-	PORTC = 0xFF;
-	PORTB = 0xDF;
+	PORTC = ~0x00;	
+	PORTB = ~0x04;
 	_delay_ms(scan);
 	PORTD = 0x38;
-	PORTC = 0xFF;
-	PORTB = 0xEF;
-	_delay_ms(scan);
-	PORTD = 0x1C;
-	PORTC = 0xFF;
-	PORTB = 0xF7;
+	PORTC = ~0x00;
+	PORTB = ~0x08;
 	_delay_ms(scan);	
+	PORTD = 0x1C;
+	PORTC = ~0x00;
+	PORTB = ~0x10;
+	_delay_ms(scan);
 	PORTD = 0x0E;
-	PORTC = 0xFF;
-	PORTB = 0xFB;
+	PORTC = ~0x00;
+	PORTB = ~0x20;
 	_delay_ms(scan);
 	PORTD = 0xFF;
-	PORTC = 0xFF;
-	PORTB = 0xFD;
+	PORTC = ~0x01;
+	PORTB = ~0x00;
 	_delay_ms(scan);
-	PORTD = 0x7E;
-	PORTC = 0xFF;
-	PORTB = 0xFE;
-	_delay_ms(scan);		
-}
+	PORTD = 0xFE;
+	PORTC = ~0x02;
+	PORTB = ~0x00;
+	_delay_ms(scan);				
+}	
 
 int main(void)
 {
-	DDRD = 0xFF;	// COLUMN
-	DDRB = 0x3F;	// ROW
-	DDRC = 0x03;	// ROW
+	DDRD = 0xFF;	// COLUMN D0 - D7
+	DDRB = 0x3F;	// ROW B0 - B5 
+	DDRC = 0x03;	// ROW C0 & C1
 	
 	_delay_ms(delay);
     while (1) 
     {
-		//off();
-		//_delay_ms(interval);
-		//on();
-		//_delay_ms(interval);
-		//one();
-		//_delay_ms(interval);
-		//two();
-		//_delay_ms(100);
-		//_delay_ms(500);
+		off();
+		_delay_ms(interval);
+		on();
+		_delay_ms(interval);
+		one();
+		_delay_ms(interval);
+		two();
+		_delay_ms(100);
     }
 }
 

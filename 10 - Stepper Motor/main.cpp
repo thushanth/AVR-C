@@ -2,7 +2,9 @@
  * stepper_A4988N.cpp
  *
  * Created: 7/6/2023 7:15:20 PM
+ * Modified: 8/7/2023 4:29:51 PM
  * Author : B550-E
+ * Note: Works but motor spins too slow. 
  */ 
 #ifndef F_CPU
 #define F_CPU 16000000UL
@@ -11,32 +13,30 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define stepPin 0x02
-#define dirPin 0x01
-
 int main(void)
 {
-    DDRB = 0x03;
-	PORTB = dirPin;
+    DDRD = 0x18;	// DIR - PD4, STEP PD3 1 as output
+	_delay_ms(100);
     while (1) 
     {
-		for(int x = 0; x < 200; x++)
+		PORTD = 0x10;
+		_delay_ms(100);
+		for(int x = 0; x < 20; x++)
 		{
-			PORTB = (stepPin ^ dirPin);
+			PORTD = 0x18;
 			_delay_ms(500);
-			PORTB = dirPin;
+			PORTD = 0x10;
 			_delay_ms(500);
 		}
-		_delay_ms(1000);
-		PORTB = 0x00;
-		for(int x = 0; x < 400; x++)
+		PORTD = 0x00;
+		_delay_ms(100);
+		for(int x = 0; x < 20; x++)
 		{
-			PORTB = stepPin;
+			PORTD = 0x08;
 			_delay_ms(500);
-			PORTB = 0x00;
+			PORTD = 0x00;
 			_delay_ms(500);
 		}
-		_delay_ms(1000);
     }
 }
 

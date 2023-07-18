@@ -5,7 +5,7 @@
  * This method requires understanding and schematic of the DOT MATRIX. BASED ON 1088AS.
  * Uses the 8x8 Common Cathode pin out. Pin 16 and Pin 1 with multimeter will light up using continuity from DMM. If 16 is + and 1 is GND (Common Cathode), if opposite (Common Anode)
  * See pin out from source: http://acoptex.com/uploads/BxCommonanode.jpg
- * Modified: 7/18/2023 
+ * Modified: 7/18/2023 6:59:00 PM
  * Swap Row and Column Wiring, Removed 1, 2 example function and added scan_matrix. 
  * Author : B550-E
  */ 

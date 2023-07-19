@@ -15,9 +15,11 @@
 | ------- | ----------- | ---- | ---------- | -------- | ---------- | -------- | -------------------------------- |
 | TinyAVR | ATTINY44A   | 12   |      4     |    256   |     256    | 8x10 bit | Qtouch, Diff ADC, Gain Stage     |
 | TinyAVR | ATTINY45    | 6    |      4     |    256   |     256    | 4x10 bit | High Speed, Diff ADC, Gain Stage |
-| MegaAVR | ATMEGA328PB | 27   |     32     |    2K    |     1K     | 8x10 bit | Low cost, Qtouch                 |
-| MegaAVR | ATMEGA32A   | 32   |     32     |    2K    |     1K     | 8x10 bit | 16-bit timer                     |
+| MegaAVR | ATMEGA328PB | 27   |     32     |    2K    |     1K     | 8x10 bit |                  		  |
+| MegaAVR | ATMEGA32A   | 32   |     32     |    2K    |     1K     | 8x10 bit | 16-bit timer, Low cost, Qtouch   |
 | MegaAVR | ATMEGA168PB | 27   |     16     |    1K    |     512    | 8x10 bit |                                  |
+
+{Source: Microchip - https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-45154-Product-Selection-Guide_Brochure.pdf}
 
 --- 
 
@@ -39,6 +41,37 @@
 ![arduino-vs-atmega168-chip-pinouts](https://github.com/thushanth/AVR-C/assets/9505927/3dbf903b-cb61-4bb5-af0f-023ce7111475)
 
 {Source: Christophe VG - https://christophe.vg/technology/ATMEGA168}
+
+---
+
+### AVR Product Line UP
+
+AVR Offers their microcontrollers from the family range from small 8-bit to larger 32-bit ARM based products. 
+- We are only focusing on 8-bit microcontrollers in this repo. 
+- For 32 bit we switch to STMicro in another repo.
+
+AVR 8-bit are organized as the following
+TINYAVR :arrow_forward: MEGAAVR :arrow_forward: XMEGAAVR
+
+AVR 32-bit ARM Based MCU
+| Architeture | Models    |
+| ----------- | --------- |
+| CORTEX M0   | SAMD10    |
+|             | SAMD11    |
+|             | SAMD20    |
+|             | SAMD21    |
+|             | SAML21/22 |
+|             | SAMC20/21 |
+| CORTEX M4   | SAM4N     |
+|             | SAM4S     |
+|             | SAM4E     |
+|             | SAM4L     |
+|             | SAM G     |
+| CORTEX M7   | SAM S70   |
+|             | SAM E70   |
+|             | SAM V70   |
+|             | SAMC V71  |
+
 
 ### Functionalities & Features
 - ATmega328P-PU

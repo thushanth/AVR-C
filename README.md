@@ -76,6 +76,8 @@ AVR 32-bit ARM Based MCU
 |             | SAM V70   |
 |             | SAM V71   |
 
+![Screenshot 2023-07-19 144504](https://github.com/thushanth/AVR-C/assets/9505927/7990b6cd-b8f8-4648-aa7d-4e93996aaeca)
+
 ---
 
 ### Functionalities & Features
@@ -131,6 +133,8 @@ A: Contains a microprocessor (calculator) and pheripherals. Weaker computation a
 
 { Source: Microchip - https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-45154-Product-Selection-Guide_Brochure.pdf }
 
+![Architecture_Diagram](https://github.com/thushanth/AVR-C/assets/9505927/c2cf89fb-8ce1-438e-81f1-6d52531d03a6)
+
 This image has two sections highligted in Blue for the program memory and orange for the data memory. 
 When uploading your code, the program memory will handle your complied code that is converted from C language to Intel Hex binary file.
 When executing your code, the data memory will process the code from the program memory and execute the required functions and call the required pheripherals. 
@@ -139,6 +143,17 @@ When executing your code, the data memory will process the code from the program
 ---
 
 ### Status Register
+
+    [ I , T, H, S, V, N, Z, C]
+
+- I: Global Interrupt
+- T: Bit Copy Storage
+- H: Half carry Flag
+- S: Sign Bit
+- V: Two's Complement Overflow Flag
+- N: Negative Flag
+- Z: Zero Flag
+- C: Carry Flag
 
 ---
 

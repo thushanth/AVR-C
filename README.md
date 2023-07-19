@@ -1,10 +1,14 @@
 ### Microcontrollers covered
-- [ ] ATMEGA328P-PU, AVRC Example Codes [WIP]
+- :heavy_exclamation_mark: ATMEGA328P-PU, AVRC Example Codes [WIP] 
 
-- [ ] ATMEGA32L, AVRC Example Codes
+- :registered: ATMEGA32L, AVRC Example Codes [Scheduled] 
 
-- [ ] ATMEGA168-20PU, AVRC Example Codes
+- :registered: ATMEGA168-20PU, AVRC Example Codes [Scheduled] 
 
+##### Legend
+:heavy_exclamation_mark:[WIP] :registered:[Scheduled] :copyright:[Completed]
+
+---
 
 ### Recommend AVR Microcontrollers
 - ATtiny45
@@ -21,7 +25,10 @@
 ![Pinout-Diagram-1-2047x2048-3137328113](https://github.com/thushanth/AVR-C/assets/9505927/d6a9b536-2294-4190-871c-54d54d7896cf)
 {Source: Arduino.cc - docs.arduino.cc/retired/boards/arduino-uno-rev3-with-long-pins}
 
+- ATMEGA32L
 
+
+- ATMEGA168
 
 ### Functionalities & Features
 - ATmega328P-PU
@@ -53,10 +60,14 @@
 
 ### Architecture
 - ATmega328P-PU
+
 ![Pasted image 20230709213944](https://github.com/thushanth/AVR-C/assets/9505927/6eae0da0-f2d3-4490-b49e-3a6ef4af2c1e)
+
 {Source: Microchip Datasheet}
 
+
 ![Pasted image 20230709214009](https://github.com/thushanth/AVR-C/assets/9505927/6590e58f-702b-4c93-a5d7-66aac6006b06)
+
 {Source: Microchip Datasheet}
 
 ### Status Register

@@ -19,8 +19,6 @@
 ### Pin Configurations
 - ATMEGA328P-PU
 ![Pinout-Diagram-1-2047x2048-3137328113](https://github.com/thushanth/AVR-C/assets/9505927/d6a9b536-2294-4190-871c-54d54d7896cf)
-
-![alt text](https://github.com/thushanth/AVR-C/tree/main/assets/Pinout-Diagram-1-2047x2048-3137328113.png)
 {Source: Arduino.cc - docs.arduino.cc/retired/boards/arduino-uno-rev3-with-long-pins}
 
 
@@ -55,9 +53,10 @@
 
 ### Architecture
 - ATmega328P-PU
-![[assets/Pasted image 20230709213944.png]]
+![Pasted image 20230709213944](https://github.com/thushanth/AVR-C/assets/9505927/6eae0da0-f2d3-4490-b49e-3a6ef4af2c1e)
 {Source: Microchip Datasheet}
-![[assets/Pasted image 20230709214009.png]]
+
+![Pasted image 20230709214009](https://github.com/thushanth/AVR-C/assets/9505927/6590e58f-702b-4c93-a5d7-66aac6006b06)
 {Source: Microchip Datasheet}
 
 ### Status Register

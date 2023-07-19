@@ -22,13 +22,22 @@
 
 ### Pin Configurations
 - ATMEGA328P-PU
+
 ![Pinout-Diagram-1-2047x2048-3137328113](https://github.com/thushanth/AVR-C/assets/9505927/d6a9b536-2294-4190-871c-54d54d7896cf)
+
 {Source: Arduino.cc - docs.arduino.cc/retired/boards/arduino-uno-rev3-with-long-pins}
 
 - ATMEGA32L
 
+![Screenshot 2023-07-19 130412](https://github.com/thushanth/AVR-C/assets/9505927/32e3f417-9fbe-450a-b01b-69d2741e4d78)
+
+{Source: Ibrar Ayyub - https://atmega32-avr.com/atmega-32-pinout/}
 
 - ATMEGA168
+
+![arduino-vs-atmega168-chip-pinouts](https://github.com/thushanth/AVR-C/assets/9505927/3dbf903b-cb61-4bb5-af0f-023ce7111475)
+
+{Source: Christophe VG - https://christophe.vg/technology/ATMEGA168}
 
 ### Functionalities & Features
 - ATmega328P-PU

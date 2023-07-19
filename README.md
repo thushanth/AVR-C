@@ -18,7 +18,7 @@
 
 ### Pin Configurations
 - ATMEGA328P-PU
-![[assets/Pinout-Diagram-1-2047x2048-3137328113.png]]
+![alt text](https://github.com/thushanth/AVR-C/tree/main/assets/Pinout-Diagram-1-2047x2048-3137328113.png)
 {Source: Arduino.cc - docs.arduino.cc/retired/boards/arduino-uno-rev3-with-long-pins}
 
 

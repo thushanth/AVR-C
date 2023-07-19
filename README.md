@@ -10,15 +10,16 @@
 
 ---
 
-### Recommend AVR Microcontrollers
-- ATtiny45
-	- 6 I/O pins, high speed PWM, V-USB, 25, 45, and 85 are program memory (2kB, 4kB, and 8kB)
-- ATtiny44
-	- 12 I/O Pins, 16 bit timer
-- ATmega328P-PU, ATmega168-20PU, ATmegaxx8
-	- 23+ I/O Pins, PWM, I2C, SPI, USART, Multiple Timers
-- ATmega32
-	- 32Kb Program Memory, JTAG, 32 I/O Pins, Four PWM, USART, SPI, 8 - 10 bit ADC channels, two 8-bit timers, one 16-bit timer.
+### Recommended AVR Microcontrollers
+| Family  | Part #      | I/Os | Flash (KB) | SRAM (B) | EEPROM (B) | ADC      | Features                         |
+| ------- | ----------- | ---- | ---------- | -------- | ---------- | -------- | -------------------------------- |
+| TinyAVR | ATTINY44A   | 12   |      4     |    256   |     256    | 8x10 bit | Qtouch, Diff ADC, Gain Stage     |
+| TinyAVR | ATTINY45    | 6    |      4     |    256   |     256    | 4x10 bit | High Speed, Diff ADC, Gain Stage |
+| MegaAVR | ATMEGA328PB | 27   |     32     |    2K    |     1K     | 8x10 bit | Low cost, Qtouch                 |
+| MegaAVR | ATMEGA32A   | 32   |     32     |    2K    |     1K     | 8x10 bit | 16-bit timer                     |
+| MegaAVR | ATMEGA168PB | 27   |     16     |    1K    |     512    | 8x10 bit |                                  |
+
+--- 
 
 ### Pin Configurations
 - ATMEGA328P-PU

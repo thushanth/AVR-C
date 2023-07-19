@@ -72,6 +72,7 @@ AVR 32-bit ARM Based MCU
 |             | SAM V70   |
 |             | SAMC V71  |
 
+---
 
 ### Functionalities & Features
 - ATmega328P-PU
@@ -100,6 +101,7 @@ AVR 32-bit ARM Based MCU
 	- 1.8 - 5v {set brown out accordingly}
 	- -40 to 85c
 
+---
 
 ### Architecture
 - ATmega328P-PU
@@ -113,27 +115,47 @@ AVR 32-bit ARM Based MCU
 
 {Source: Microchip Datasheet}
 
+---
+
 ### Status Register
+
+---
 
 ### Flash Memory {Program and Bootloader}
 
+---
+
 ### Registers {8-bit General registers, Special registers, and SRAM}
+
+---
 
 ### EEPROM
 
+---
+
 ### Fuses
+
+---
 
 ### Lock Bits
 
+---
+
 ### Clock Configurations
+
+---
 
 ### Programming Methods {SPI, Parallel, Bit-Bang, JTAG, SWDIO}
 
+---
+
 ### ATMEL Studio Config, AVRDUDESS, SinaProg
+
+---
 
 ### General Purpose Input/Output Registers
 
-
+---
 
 ### GPIO Examples
 - Example 1: Blinking an LED
@@ -141,37 +163,59 @@ AVR 32-bit ARM Based MCU
 - Example 3: Push Button for LED Bar
 - Example 6: Relay SPDT with LEDs
 - Example 7: Relay SPDT with Motor
-- Example 8: Dot Matrix {Revisit error with module and coding method}
+- Example 8: Dot Matrix 
 - Example 9: Three Digit - Seven Segment LCD
-- Example 10: Stepper Motor A4988 {Revisit with stepping issue and DRV8825 and TMC modules}
+- Example 10: Stepper Motor A4988 {Revisit - DRV8825 and TMC modules}
 - Example 11: LCD 1602
 - Example 12: 4x4 Keypad Matrix
+- Example n: DC Motor L298N NON-PWM
+- IR Line Following Sensor (Single & Array)
+- HC-SR04 with LCD Range finding
+- DHT22 
+
+---
 
 ### External Interrupts Examples
 - Example 4: Interrupt with LEDs
+  
+---
 
 ### UART Examples
 - Example 5: UART to PC FTDI
+- HC-05 ZS-040 Bluetooth
+
+---
 
 ### ADC Examples
 - Example 13: LCD with Potentiometer
 - Example 14: LCD with two Potentiometer
 - Example 15: LCD with LDR
+- Heart Beat Sensor
 - Example 16: LCD with 4x4 Keypad
 - Measure Temperature Internal
 - Measure Temperature with NTC
 
+---
+
 ### Analog Comparator Examples
-- 
+- Analog Comparator with interrupt
+
+---
 
 ### On-Board EEPROM Examples
 - 
 
+---
+
 ### Timers and Counter Examples
-- 
+- Measuring Frequency and DUT with timer input capture
+
+---
 
 ### Timer CTC Mode and Input Capture Examples
 - 
+
+---
 
 ### Timer PWM Examples
 - Example 17: PWM L298N DC MOTOR
@@ -179,137 +223,52 @@ AVR 32-bit ARM Based MCU
 - Example 19: LCD with HC-SR04 Ultrasonic Distance Sensor
 - Example 20: LCD with Encoder
 - Example 21: DHT11 with LCD
+- Servo PWM {Pot Position Control, Continous rotation, }
+- Buzzer Active PWM
+- Rotary Encoder PWM
+
+---
 
 ### Watchdog Timer Examples
 - 
 
+---
+
 ### Low Power Mode Examples
 - 
 
+---
+
 ### SPI Examples
-- 
+- 8x8 dot matrix led with max7219
+- MicroSD Card
+- SPI USB
+- SPI Ethernet
+- SPI MCU to MCU {with and without interrupts}
+- SPI Flash Memory
+- SPI Registers
+
+
+---
 
 ### I2C Examples
-- 
+- 1602 LCD Backup
+- I2C Address Scanner
+- BME180
+- HMC5883L
+- INA219
+- PCA8685
+- DS1307
+- EEPROM
+- VL530LX TOF Sensor I2C
+- I2C or TWI Registers settings (Interrupts)
+
+---
 
 ### Graphic LCD Examples 
-- 
+- SPI LCD
+- LCD I2C
+- OLED LCD
 
-
-
-
-
-18. DC motor L298N (NON PWM)
-
-19. Stepper Motor (A4988N)
-
-20. Seven Segment
-
-21. 8x8 Dot Matrix LED
-
-22. 1602 LCD
-
-23. Hex Keypad
-
-24. IR Line Following Sensor (Single, Array)
-
-25. DHT22
-
-26. HC SR04 Range Finding
-
-27. HC-05 ZS-040 Bluetooth
-
-28. Interrupts {Interrupt Table} PIN capture Interrupts
-
-29. Example 4. Interrupt LED
-
-30. USART to PC Send and receive
-
-31. USART Interrupt
-
-32. PC to EEPROM
-
-33. ADC Single Ended USART {POT, LDR, HeartBeat Sensor}
-
-34. ADC Multichannel
-
-35. ADC Differential
-
-36. Analog Comparator
-
-37. Analog Comparator with interrupt
-
-38. Timers Register Configs
-
-39. Timer delay
-
-40. Timer counter
-
-41. Timer interrupt
-
-42. 16 bit timer
-
-43. delay vs timer
-
-44. Timer input capture with interrupts
-
-45. Measuring Frequency and DUT with timer input capture
-
-46. PWM Timers
-
-47. L298N PWM Motor
-
-48. Servo PWM {Pot Position Control, Continous rotation, }
-
-49. Buzzer Active PWM
-
-50. Rotary Encoder PWM
-
-51. low power registers and configuration
-
-52. watchdog timer
-
-53. SPI Registers
-
-54. SPI Flash Memory
-
-55. 8x8 dot matrix led with max7219
-
-56. SPI MCU to MCU {with and without interrupts}
-
-57. SPI Ethernet
-
-58. SPI USB
-
-59. MicroSD Card
-
-60. I2C or TWI Registers settings (Interrupts)
-
-61. EEPROM I2C
-
-62. DS1307 I2C
-
-63. PCA8685 I2C
-
-64. I2C INA219
-
-65. VL530LX TOF Sensor I2C
-
-66. HMC5883L I2C
-
-67. BME180 I2C
-
-68. I2C 1602LCD
-
-69. I2C Address Scanner
-
-70. LCD I2C
-
-71. OLED I2C
-
-72. SPI LCD
-
-  
-  
 
 PIC16f887A (PIC), STM32F401RE (ARMv7), FPGA?? {Xilinx AMD, Microchip FirePolar, Altera Intel}

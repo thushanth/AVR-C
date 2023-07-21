@@ -15,10 +15,10 @@
 
 int main(void)
 {
-    DDRD = 0x18;	// DIR - PD4, STEP PD3 1 as output
+	DDRD = 0x18;	// DIR - PD4, STEP PD3 1 as output
 	_delay_ms(100);
-    while (1) 
-    {
+	while (1) 
+	{
 		PORTD = 0x10;
 		_delay_ms(100);
 		for(int x = 0; x < 200; x++)
@@ -38,6 +38,6 @@ int main(void)
 			_delay_us(2000);
 		}
 		_delay_ms(1000);	
-    }
+	}
 }
 

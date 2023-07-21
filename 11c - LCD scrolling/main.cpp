@@ -1,9 +1,8 @@
 /*
- * 1602lcdstring.cpp
+ * LCD Scroll.cpp
  *
- * Created: 7/21/2023 4:52:13 PM
+ * Created: 7/21/2023 5:43:33 PM
  * Author : B550-E
- * Note: Printing String
  */ 
 
 #ifndef F_CPU
@@ -70,11 +69,28 @@ void LCD_init()
 int main(void)
 {
 	DDRB = 0x3F;
-	DDRD = 0xE3;
+	DDRD = 0xFB;
 	PORTB = 0x00;
-	PORTD = 0x00;
+	PORTD = 0x18;
 	LCD_init();
 	display("Hello World");
-	while (1){}
+	while (1)
+	{
+		// Shift Right
+		if((PIND & 0x08) == 0)
+		{
+			while((PIND & 0x08) == 0)
+			cmd(0x1C);
+			_delay_ms(100);
+		}
+		// Shift Left
+		if((PIND & 0x10) == 0)
+		{
+			while((PIND & 0x10) == 0)			
+			cmd(0x18);
+			_delay_ms(100);
+		}
+	}
 }
+
 
